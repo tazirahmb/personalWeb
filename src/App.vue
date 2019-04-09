@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -22,13 +27,17 @@ export default {
   --fontColor: #2c3e50;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: 'Quattrocento Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
   color: var(--fontColor);
-  background-color: #FFFFF0;
-  margin: 0;
 }
 
 h1 {
@@ -54,5 +63,15 @@ blockquote div {
 img {
   margin: 24px auto;
   display: block;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0;
 }
 </style>

@@ -25,13 +25,14 @@ export default {
   header {
     height: 2%;
     width: 100%;
+    padding-top: 8px;
     margin-bottom: 24px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
   }
   img {
     height: 25px;
     display: block;
-    margin: 8px auto;
+    margin: 0 auto 8px;
   }
   .back {
     position: absolute;

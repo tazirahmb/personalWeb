@@ -6,11 +6,13 @@
       <div class="row justify-content-center">
         <div class="col-lg-9">
           <article v-for="post in posts" :key="post.id">
-            <h4>{{ post.date.substring(0,10) }}</h4>
-            <router-link :to="{name: 'post', params: {postData: post, postSlug: post.slug}}"><h1 v-html="post.title.rendered"></h1></router-link>
+            <h4 class="animated fadeInUp">{{ post.date.substring(0,10) }}</h4>
+            <router-link :to="{name: 'post', params: {postData: post, postSlug: post.slug}}">
+              <h1 class="title animated fadeInUp" v-html="post.title.rendered"></h1>
+            </router-link>
             <hr/>
-            <p v-html="post.excerpt.rendered"></p>
-            <router-link :to="{name: 'post', params: {postData: post, postSlug: post.slug}}" href="#">read more</router-link>
+            <p class="post animated fadeInUp" v-html="post.excerpt.rendered"></p>
+            <router-link class="animated fadeIn" :to="{name: 'post', params: {postData: post, postSlug: post.slug}}" href="#">read more</router-link>
           </article>
           <div class="page">
             <router-link :to="{ name: 'home', params: {page: pageNo + 1}}" v-if="pageNo !== parseInt(pageTotal)">&larr; older posts</router-link>
@@ -49,11 +51,11 @@ export default {
       pageNo: parseInt(this.$route.params.page),
       pageTotal: 0,
       isLoading: true,
-      hostUrl: 'https://bloghosting.000webhostapp.com',
-      // hostUrl: 'http://localhost:8080/wordpress',
+      // hostUrl: 'https://bloghosting.000webhostapp.com',
+      hostUrl: 'http://localhost:8080/wordpress',
     }
   },
-  created() {
+  mounted() {
     axios.head(`${this.hostUrl}/wp-json/wp/v2/posts?per_page=5`)
       .then(res => (this.pageTotal = res.headers['x-wp-totalpages']))
     this.getPosts(this.pageNo)
@@ -117,5 +119,13 @@ export default {
   }
   h1:hover {
     color: rgb(22, 84, 143);
+  }
+  .title {
+    animation-delay: 0.2s;
+    animation-duration: 0.75s;
+  }
+  .post {
+    animation-delay: 0.5s;
+    animation-duration: 0.75s;
   }
 </style>

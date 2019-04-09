@@ -2,7 +2,7 @@
   <footer>
     <div class="container">
       <q><em>Hidup mungkin rumit, namun bahagia sederhana</em></q>
-      <span>&copy; Z R O K U, 2019</span>
+      <span><p>&copy; Z R O K U, 2019</p></span>
     </div>
   </footer>
 </template>
@@ -17,11 +17,10 @@ export default {
 <style scoped>
   footer {
     margin-top: 48px;
-    height: 30px;
     border-top: 1px solid rgba(0, 0, 20, .2);  
   }
   q, span {
-    margin: 16px auto;
+    margin: 1em auto;
   }
   q {
     float: left;
@@ -33,6 +32,9 @@ export default {
     q, span {
       clear: both;
       text-align: center;
+    }
+    span {
+      float: none;
     }
   }
 </style>

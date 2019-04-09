@@ -21,7 +21,7 @@ export default new Router({
       props: true
     },
     {
-      path: '/:postSlug',
+      path: '/post/:postSlug',
       name: 'post',
       component: Post,
       props: true,

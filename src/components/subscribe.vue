@@ -1,16 +1,5 @@
 <template>
     <section>
-        <!-- <svg width="750" height="300">
-          <defs>
-            <filter id="f1" x="0" y="0">
-              <feGaussianBlur in="sourceGraphic" stdDeviation="3"/>
-            </filter>
-          </defs>
-          <circle cx="80" cy="200" r="40" fill="rgba(31, 120, 204, .3)" filter="url(#f1)" />
-          <circle cx="150" cy="125" r="30" fill="rgba(31, 120, 204, .2)" filter="url(#f1)" />
-          <circle cx="225" cy="25" r="20" fill="rgba(31, 120, 204, .5)" filter="url(#f1)" />
-          <circle cx="0" cy="0" r="200" fill="rgba(31, 120, 204, .1)" filter="url(#f1)" />
-        </svg> -->
         <h1>Want to discuss something?</h1>
         <h4>email me at <a href="mailto:zroku@outlook.com">zroku@outlook.com</a></h4>
     </section>
