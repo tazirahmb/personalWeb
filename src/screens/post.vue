@@ -87,8 +87,7 @@ export default {
       // isLoading: true,
       // isNotFound: false,
       // comments: null,
-      // hostUrl: 'https://bloghosting.000webhostapp.com',
-      hostUrl: 'http://localhost:8080/wordpress',
+      hostUrl: process.env.SECRET_URL,
     }
   },
   created() {

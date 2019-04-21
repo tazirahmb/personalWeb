@@ -61,6 +61,8 @@ blockquote div {
   margin: 16px 0;
 }
 img {
+  max-width: 100%;
+  height: auto;
   margin: 24px auto;
   display: block;
 }

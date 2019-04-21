@@ -51,8 +51,7 @@ export default {
       pageNo: parseInt(this.$route.params.page),
       pageTotal: 0,
       isLoading: true,
-      // hostUrl: 'https://bloghosting.000webhostapp.com',
-      hostUrl: 'http://localhost:8080/wordpress',
+      hostUrl: process.env.VUE_APP_SECRET_URL,
     }
   },
   mounted() {

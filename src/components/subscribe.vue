@@ -1,7 +1,14 @@
 <template>
     <section>
         <h1>Want to discuss something?</h1>
-        <h4>email me at <a href="mailto:zroku@outlook.com">zroku@outlook.com</a></h4>
+        <div class="socmed">
+          <p>
+            <i class="fas fa-envelope"></i><a href="mailto:zroku@outlook.com">zroku@outlook.com</a>
+          </p>
+          <p>
+            <i class="fab fa-twitter"></i><a href="https://www.twitter.com/zroku_">@Zroku_</a>
+          </p>
+        </div>
     </section>
 </template>
 
@@ -20,6 +27,20 @@ export default {
     margin: 24px auto;
     color: #2c3e50;
   }
+  .socmed {
+    width: 100%;
+    text-align: center;
+  }
+  p {
+    display: inline-block;
+    margin-right: 16px;
+  }
+  i {
+    margin-right: 8px;
+  }
+  a {
+    color: var(--fontColor);
+  }
   h1, h4 {
     text-align: center;
   }
@@ -27,10 +48,4 @@ export default {
     color: #2c3e50;
     margin-bottom: 1.5em;
   }
-  /* svg {
-    position: absolute;
-    top: 24px;
-    left: 16px;
-    z-index: 0;
-  } */
 </style>
