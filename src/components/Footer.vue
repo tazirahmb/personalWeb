@@ -1,8 +1,10 @@
 <template>
   <footer>
     <div class="container">
-      <q><em>Hidup mungkin rumit, namun bahagia sederhana</em></q>
-      <p>&copy; Z R O K U, 2019</p>
+      <div>
+        <q><em>Hidup mungkin rumit, namun bahagia sederhana</em></q>
+        <p>&copy; Z R O K U, 2019</p>
+      </div>
     </div>
   </footer>
 </template>
@@ -31,8 +33,8 @@ export default {
       text-align: center;
     }
     p {
-      margin-top: 1em;
       float: none;
+      margin-top: 1em;
     }
   }
 </style>

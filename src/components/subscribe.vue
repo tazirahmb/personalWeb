@@ -25,11 +25,14 @@ export default {
     width: 100%;
     background-color: rgba(31, 120, 204, .1);
     margin: 24px auto;
-    color: #2c3e50;
   }
   .socmed {
     width: 100%;
     text-align: center;
+  }
+  h1 {
+    color: var(--fontColor);
+    margin-bottom: 1.5em;
   }
   p {
     display: inline-block;
@@ -40,12 +43,5 @@ export default {
   }
   a {
     color: var(--fontColor);
-  }
-  h1, h4 {
-    text-align: center;
-  }
-  h1 {
-    color: #2c3e50;
-    margin-bottom: 1.5em;
   }
 </style>

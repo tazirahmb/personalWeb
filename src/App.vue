@@ -25,6 +25,7 @@ export default {
   --primaryLight: rgb(31, 120, 204);
   --primaryDark: rgb(22, 84, 143);
   --fontColor: #2c3e50;
+  --lightGray: #CCC;
 }
 
 * {
@@ -38,22 +39,47 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8f8f8;
   color: var(--fontColor);
+  font-size: 16px;
 }
 
-h1 {
+body h1 {
+  font-size: 40px;
   font-family: 'ZCOOL XiaoWei', serif;
-  color: rgb(31, 120, 204);
+  color: var(--primaryLight);
 }
 
-h4 {
+body h2 {
+  font-size: 32px;
+  color: var(--primaryLight);
+  font-weight: bold;
+}
+
+body h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body h4 {
   font-size: 14px;
-  line-height: 12px;
   font-weight: lighter;
+  line-height: 0px;
+}
+
+body h5 {
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: 0px;
+}
+
+body h6 {
+  font-size: 10px;
+  font-weight: lighter;
+  line-height: 0px;
 }
 
 blockquote {
   padding-left: 32px;
-  border-left: 2px solid rgb(31, 120, 204);
+  border-left: 2px solid var(--primaryLight);
   font-style: italic;
   font-weight: bold;
 }

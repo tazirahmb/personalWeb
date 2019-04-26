@@ -4,6 +4,9 @@ import Router from 'vue-router';
 import Home from './screens/home.vue';
 import Post from './screens/post.vue';
 
+import Feed from './components/feed.vue';
+import Markdown from './components/vuemarkdown.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -12,10 +15,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/1',
+      redirect: '/page=1',
     },
     {
-      path: '/:page',
+      path: '/page=:page',
       name: 'home',
       component: Home,
       props: true
@@ -25,6 +28,16 @@ export default new Router({
       name: 'post',
       component: Post,
       props: true,
+    },
+    {
+      path: '/feed',
+      name: 'feed',
+      component: Feed,
+    },
+    {
+      path: '/md',
+      name: 'markdown',
+      component: Markdown,
     },
   ],
 });

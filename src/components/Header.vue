@@ -1,11 +1,9 @@
 <template>
-  <div>
     <header>
       <router-link to="/">
-        <img src="@/assets/logo.png" alt="">
+        <img src="@/assets/header.png" alt="">
       </router-link>
     </header>
-  </div>
 </template>
 
 <script>
@@ -33,16 +31,5 @@ export default {
     height: 25px;
     display: block;
     margin: 0 auto 8px;
-  }
-  .back {
-    position: absolute;
-    width: 40%;
-    text-align: center;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .back {
-      width: 25%
-    }
   }
 </style>
