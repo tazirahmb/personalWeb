@@ -31,48 +31,48 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-import Subscribe from '../components/subscribe.vue'
-import Loading from '../components/Loading.vue'
-import axios from 'axios'
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Subscribe from "../components/subscribe.vue";
+import Loading from "../components/Loading.vue";
+import axios from "axios";
 
 export default {
-  name: 'home',
-  components: {
-    Header,
-    Footer,
-    Subscribe,
-    Loading
-  },
-  data() {
-    return {
-      posts: null,
-      pageNo: parseInt(this.$route.params.page),
-      pageTotal: 0,
-      isLoading: true,
-    }
-  },
-  mounted() {
-    axios.head(`${process.env.VUE_APP_SECRET_URL}/wp-json/wp/v2/posts?per_page=5`)
-      .then(res => (this.pageTotal = res.headers['x-wp-totalpages']))
-    this.getPosts(this.pageNo)
-  }, methods: {
-    getPosts(pageNumber) {
-      this.isLoading = true
-      axios.get(`${process.env.VUE_APP_SECRET_URL}/wp-json/wp/v2/posts?per_page=5&page=` + pageNumber)
-        .then(res => {this.posts = res.data; this.isLoading = false})
-    },
-    scrollToTop() {
-      window.scrollTo(0,0)
-    }
-  }, beforeRouteUpdate(to, from, next) {
-    this.pageNo = to.params.page
-    this.getPosts(this.pageNo)
-    this.scrollToTop()
-    next()
-  }
-}
+	name: "home",
+	components: {
+		Header,
+		Footer,
+		Subscribe,
+		Loading
+	},
+	data() {
+		return {
+			posts: null,
+			pageNo: parseInt(this.$route.params.page),
+			pageTotal: 0,
+      isLoading: true
+		};
+	},
+	mounted() {
+		axios.head(`https://bloghosting.000webhostapp.com/wp-json/wp/v2/posts?per_page=5`)
+			.then(res => (this.pageTotal = res.headers["x-wp-totalpages"]));
+		this.getPosts(this.pageNo);
+	}, methods: {
+		getPosts(pageNumber) {
+			this.isLoading = true;
+			axios.get(`https://bloghosting.000webhostapp.com/wp-json/wp/v2/posts?per_page=5&page=` + pageNumber)
+				.then(res => {this.posts = res.data; this.isLoading = false;});
+		},
+		scrollToTop() {
+			window.scrollTo(0,0);
+		}
+	}, beforeRouteUpdate(to, from, next) {
+		this.pageNo = to.params.page;
+		this.getPosts(this.pageNo);
+		this.scrollToTop();
+		next();
+	}
+};
 </script>
 
 <style scoped>

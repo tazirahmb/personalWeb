@@ -11,14 +11,14 @@
 
 <script>
 export default {
-  name: 'NotFound',
-  props: {
-    isNotFound: {
-      type: Boolean,
-      default: true,
-    }
-  }
-}
+	name: "NotFound",
+	props: {
+		isNotFound: {
+			type: Boolean,
+			default: true,
+		}
+	}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -15,14 +15,14 @@
 
 <script>
 export default {
-  name: 'Loading',
-  props: {
-    isLoading: {
-      type: Boolean,
-      default: true,
-    }
-  }
-}
+	name: "Loading",
+	props: {
+		isLoading: {
+			type: Boolean,
+			default: true,
+		}
+	}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

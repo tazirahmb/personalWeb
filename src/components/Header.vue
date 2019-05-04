@@ -8,14 +8,14 @@
 
 <script>
 export default {
-  name: 'Header',
-  props: {
-    notHomePage: {
-      type: Boolean,
-      default: false,
-    }
-  }
-}
+	name: "Header",
+	props: {
+		notHomePage: {
+			type: Boolean,
+			default: false,
+		}
+	}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

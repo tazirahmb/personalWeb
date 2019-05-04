@@ -15,8 +15,8 @@
 <script>
 
 export default {
-  name: 'Subscribe',
-}
+	name: "Subscribe",
+};
 </script>
 
 <style scoped>

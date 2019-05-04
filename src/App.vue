@@ -12,8 +12,8 @@
 <script>
 
 export default {
-  name: 'app',
-}
+	name: "app",
+};
 </script>
 
 <style>
@@ -54,9 +54,8 @@ body h2 {
   font-weight: bold;
 }
 
-body h2 {
+body h3 {
   font-size: 24px;
-  font-weight: bold;
 }
 
 body h4 {

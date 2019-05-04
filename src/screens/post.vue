@@ -39,50 +39,50 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-import Subscribe from '../components/subscribe.vue'
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Subscribe from "../components/subscribe.vue";
 
 // import Loading from '../components/Loading.vue'
 // import NotFound from '../components/NotFound.vue'
-import axios from 'axios'
+import axios from "axios";
 
 export default {
-  name: 'post',
-  components: {
-    Header,
-    Footer,
-    Subscribe
-  },
-  props: {
-    postData: Object,
-  },
-  data() {
-    return {
-      posts: null,
-    }
-  },
-  created() {
-    window.scrollTo(0,0)
-    if(this.postData) {
-      this.posts = this.postData
-      // this.isLoading = false
-    }
-    else {
-      this.getPost(this.$attrs.postSlug)
-    } 
-  },
-  methods: {
-    getPost(postId) {
-      this.isLoading = true
-      axios.get(`${process.env.VUE_APP_SECRET_URL}/wp-json/wp/v2/posts?slug=${postId}`)
-        .then(res => {
-          if(res.data.length == 0) {alert("Post not found"); this.$router.push('/');}
-          else {this.posts = res.data[0];}
-        })
-    }
-  }
-}
+	name: "post",
+	components: {
+		Header,
+		Footer,
+		Subscribe
+	},
+	props: {
+		postData: Object
+	},
+	data() {
+		return {
+			posts: null
+		};
+	},
+	created() {
+		window.scrollTo(0,0);
+		if(this.postData) {
+			this.posts = this.postData;
+			// this.isLoading = false
+		}
+		else {
+			this.getPost(this.$attrs.postSlug);
+		} 
+	},
+	methods: {
+		getPost(postId) {
+			this.isLoading = true;
+			axios.get(`https://bloghosting.000webhostapp.com/wp-json/wp/v2/posts?slug=${postId}`)
+				.then(res => {
+					if(res.data.length == 0) {alert("Post not found"); this.$router.push("/");}
+					else {this.posts = res.data[0];}
+				});
+		}
+	}
+};
 </script>
 
 <style scoped>
@@ -123,7 +123,7 @@ export default {
     }
     p {
       font-size: 20px;
-      line-height: 1.75em;    
+      line-height: 1.75em;
     }
   }
 </style>
